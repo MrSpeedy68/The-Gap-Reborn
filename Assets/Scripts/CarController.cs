@@ -40,13 +40,8 @@ public class CarController : MonoBehaviour
     {
         frontLeftWC.motorTorque = verticleInput * motorForce;
         frontRightWC.motorTorque = verticleInput * motorForce;
-
         currentbreakForce = isBreaking ? breakForce : 0f;
-
-        if (isBreaking)
-        {
-            ApplyBreaking();
-        }
+        ApplyBreaking();
     }
 
     private void ApplyBreaking()
