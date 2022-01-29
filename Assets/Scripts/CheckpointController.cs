@@ -5,33 +5,63 @@ using UnityEngine;
 
 public class CheckpointController : MonoBehaviour
 {
+    [SerializeField] private Checkpoint [] checkpoints;
+    [SerializeField] private int targetCheckpoint = 0;
+    [SerializeField] private bool complete = false;
 
-    public Checkpoint [] checkpoints;
-    public Checkpoint currentCheckpoint;
+    private bool hasRaceStarted = false;
+    private float totalTime = 0;
+    private float intervalTime = 0;
 
-    public Vector3 RespawnPoint()
+    private void Awake()
     {
-        return currentCheckpoint.checkpointPos.position;
+        Debug.Assert(checkpoints.Length > 0);
+        Events.OnCheckpointEnterEvent += CheckpointEnter;
+        Events.OnRaceStartEvent += RaceStart;
     }
 
-    public void CheckCurrentCheckpoint(Checkpoint checkpoint)
+    private void Start()
     {
-        for (int i = 0; i < checkpoints.Length; i++)
+        Events.OnRaceStart();
+    }
+
+    private void OnDestroy()
+    {
+        Events.OnCheckpointEnterEvent -= CheckpointEnter;
+        Events.OnRaceStartEvent -= RaceStart;
+    }
+
+    public void Update()
+    {
+        totalTime += Time.deltaTime;
+        intervalTime += Time.deltaTime;
+    }
+
+    public void RaceStart()
+    {
+        hasRaceStarted = true;
+    }
+    
+    public void RaceEnd()
+    {
+        complete = true;
+        intervalTime = 0;
+        totalTime = 0;
+    }
+
+    public void CheckpointEnter(Checkpoint checkpoint)
+    {
+        if(!hasRaceStarted) return;
+        
+        if (checkpoints[targetCheckpoint].Equals(checkpoint))
         {
-            if (currentCheckpoint == null)
-            {
-                currentCheckpoint = checkpoint;
-                checkpoint.isCheckpointEntered = true;
-            }
-            else if ( i != 0 && 
-                      checkpoints[i] == checkpoint &&
-                      currentCheckpoint != checkpoint &&
-                      checkpoints[i-1].isCheckpointEntered &&
-                      !checkpoint.isCheckpointEntered)
-            {
-                currentCheckpoint = checkpoint;
-                checkpoint.isCheckpointEntered = true;
-            }
+            Debug.Log($"Total time {totalTime} : interval {intervalTime}");
+            checkpoints[targetCheckpoint++].isCheckpointEntered = true;
         }
+
+        intervalTime = 0;
+
+        if (targetCheckpoint >= checkpoints.Length)
+            RaceEnd();
     }
 }

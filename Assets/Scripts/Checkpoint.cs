@@ -20,7 +20,7 @@ public class Checkpoint : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            checkpointController.CheckCurrentCheckpoint(this);
+            Events.OnCheckpointEnter(this);
         }
     }
 }
