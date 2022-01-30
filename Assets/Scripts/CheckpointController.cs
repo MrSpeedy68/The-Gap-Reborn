@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class CheckpointController : MonoBehaviour
 {
+    [SerializeField] private Transform startPosition;
     [SerializeField] private Checkpoint [] checkpoints;
     [SerializeField] private int targetCheckpoint = 0;
     [SerializeField] private bool complete = false;
@@ -33,10 +34,26 @@ public class CheckpointController : MonoBehaviour
 
     public void Update()
     {
+        if(!hasRaceStarted) return;
+        
         totalTime += Time.deltaTime;
         Events.OnTimeUpdate(totalTime);
         intervalTime += Time.deltaTime;
         Events.OnIntervalUpdate(intervalTime);
+
+        if (Input.GetButtonDown("Restart"))
+        {
+            Transform where = targetCheckpoint == 0
+                ? startPosition
+                : checkpoints[targetCheckpoint].gameObject.transform;
+
+            var player = GameObject.FindWithTag("Player");
+            if (player)
+            {
+                player.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+                player.transform.position = where.position;
+            }
+        }
     }
 
     public void RaceStart()
@@ -60,9 +77,9 @@ public class CheckpointController : MonoBehaviour
         {
             Debug.Log($"Total time {totalTime} : interval {intervalTime}");
             checkpoints[targetCheckpoint++].isCheckpointEntered = true;
+            intervalTime = 0;
         }
 
-        intervalTime = 0;
 
         if (targetCheckpoint >= checkpoints.Length)
             RaceEnd();
