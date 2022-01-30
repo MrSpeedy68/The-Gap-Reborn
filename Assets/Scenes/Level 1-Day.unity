@@ -97,8 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 345ffa580dd918a438405136692ffb24, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: c4e94023f4a235d4e8cc91a9b698ab22, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -5755,66 +5755,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Car
       objectReference: {fileID: 0}
-    - target: {fileID: 736099131735731831, guid: 30c704a765ac766408c5ad0751de3aa0, type: 3}
-      propertyPath: speedometer
-      value: 
-      objectReference: {fileID: 1169418315}
-    - target: {fileID: 4512716201347919160, guid: 30c704a765ac766408c5ad0751de3aa0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.000029780793
-      objectReference: {fileID: 0}
-    - target: {fileID: 4512716201347919160, guid: 30c704a765ac766408c5ad0751de3aa0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 5.6899996
-      objectReference: {fileID: 0}
-    - target: {fileID: 4512716201347919160, guid: 30c704a765ac766408c5ad0751de3aa0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -15.640015
-      objectReference: {fileID: 0}
-    - target: {fileID: 4512716201347919160, guid: 30c704a765ac766408c5ad0751de3aa0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.9892809
-      objectReference: {fileID: 0}
-    - target: {fileID: 4512716201347919160, guid: 30c704a765ac766408c5ad0751de3aa0, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.14602509
-      objectReference: {fileID: 0}
-    - target: {fileID: 4512716201347919160, guid: 30c704a765ac766408c5ad0751de3aa0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.0000009418652
-      objectReference: {fileID: 0}
-    - target: {fileID: 4512716201347919160, guid: 30c704a765ac766408c5ad0751de3aa0, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.00000013902616
-      objectReference: {fileID: 0}
-    - target: {fileID: 4512716202124024811, guid: 30c704a765ac766408c5ad0751de3aa0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.000029780793
-      objectReference: {fileID: 0}
-    - target: {fileID: 4512716202124024811, guid: 30c704a765ac766408c5ad0751de3aa0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 5.6899996
-      objectReference: {fileID: 0}
-    - target: {fileID: 4512716202124024811, guid: 30c704a765ac766408c5ad0751de3aa0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -15.640015
-      objectReference: {fileID: 0}
-    - target: {fileID: 4512716202124024811, guid: 30c704a765ac766408c5ad0751de3aa0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.9892809
-      objectReference: {fileID: 0}
-    - target: {fileID: 4512716202124024811, guid: 30c704a765ac766408c5ad0751de3aa0, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.14602509
-      objectReference: {fileID: 0}
-    - target: {fileID: 4512716202124024811, guid: 30c704a765ac766408c5ad0751de3aa0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.0000009418652
-      objectReference: {fileID: 0}
-    - target: {fileID: 4512716202124024811, guid: 30c704a765ac766408c5ad0751de3aa0, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.00000013902616
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30c704a765ac766408c5ad0751de3aa0, type: 3}
 --- !u!1001 &521436358
@@ -11428,17 +11368,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4140096659794746, guid: 63f209a73d2eb4e469c7ea5b5d8afd38, type: 3}
   m_PrefabInstance: {fileID: 1163605153}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1169418315 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1169418315, guid: 30c704a765ac766408c5ad0751de3aa0, type: 3}
-  m_PrefabInstance: {fileID: 519729688}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1175695491
 PrefabInstance:
   m_ObjectHideFlags: 0

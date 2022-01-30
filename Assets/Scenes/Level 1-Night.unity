@@ -5759,6 +5759,10 @@ PrefabInstance:
       propertyPath: speedometer
       value: 
       objectReference: {fileID: 1169418315}
+    - target: {fileID: 736099131735731831, guid: 30c704a765ac766408c5ad0751de3aa0, type: 3}
+      propertyPath: isRearWheelDrive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4512716201347919160, guid: 30c704a765ac766408c5ad0751de3aa0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.000029780793
