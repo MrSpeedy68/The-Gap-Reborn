@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class CarController : MonoBehaviour
@@ -18,6 +19,8 @@ public class CarController : MonoBehaviour
     [SerializeField] private float breakForce;
     [SerializeField] private float maxSteerAngle;
 
+    [SerializeField] private TMP_Text speedometer;
+
     [SerializeField] private WheelCollider frontLeftWC;
     [SerializeField] private WheelCollider frontRightWC;
     [SerializeField] private WheelCollider rearLeftWC;
@@ -27,13 +30,21 @@ public class CarController : MonoBehaviour
     [SerializeField] private Transform frontRightTransform;
     [SerializeField] private Transform rearLeftTransform;
     [SerializeField] private Transform rearRightTransform;
-    
+
+    private Rigidbody rb;
+
+    public void Awake()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
+
     private void FixedUpdate()
     {
         GetInput();
         HandleMotor();
         HandleSteering();
         UpdateWheels();
+        UpdateSpeedometer();
     }
 
     private void HandleMotor()
@@ -81,5 +92,10 @@ public class CarController : MonoBehaviour
         wheelCollider.GetWorldPose(out pos, out rot);
         wheelTransform.rotation = rot;
         wheelTransform.position = pos;
+    }
+
+    private void UpdateSpeedometer()
+    {
+        speedometer.text = Mathf.RoundToInt(rb.velocity.magnitude).ToString() + " km/h";
     }
 }
