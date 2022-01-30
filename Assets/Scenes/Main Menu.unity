@@ -464,6 +464,18 @@ MonoBehaviour:
           m_StringArgument: Level 2
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 375206051}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: SetCarName
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: F1
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &269032849
 GameObject:
   m_ObjectHideFlags: 0
@@ -741,7 +753,6 @@ GameObject:
   m_Component:
   - component: {fileID: 335493719}
   - component: {fileID: 335493718}
-  - component: {fileID: 335493717}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -749,14 +760,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &335493717
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 335493716}
-  m_Enabled: 1
 --- !u!20 &335493718
 Camera:
   m_ObjectHideFlags: 0
@@ -1710,6 +1713,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfdf8f79a919495fa520cf377b3a4f27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CameroCar: {fileID: 736099131735731830, guid: 30c704a765ac766408c5ad0751de3aa0, type: 3}
+  F1Car: {fileID: 5534159726495459062, guid: 81de649583e26d44ea59dd993ca65444, type: 3}
 --- !u!4 &645050896
 Transform:
   m_ObjectHideFlags: 0
@@ -3060,6 +3065,18 @@ MonoBehaviour:
           m_StringArgument: Level 1
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 375206051}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: SetCarName
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Camero
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1382696439
 GameObject:
   m_ObjectHideFlags: 0
@@ -4399,7 +4416,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2055265939
 RectTransform:
   m_ObjectHideFlags: 0
