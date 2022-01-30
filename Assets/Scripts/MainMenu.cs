@@ -22,6 +22,11 @@ public class MainMenu : MonoBehaviour
     {
         PlayerPrefs.SetString("level", level);
     }
+    
+    public void SetCarName(string car)
+    {
+        PlayerPrefs.SetString("car", car);
+    }
 
     public void GotoLevelSelect()
     {
