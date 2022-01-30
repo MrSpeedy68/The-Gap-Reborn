@@ -5451,10 +5451,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Car
       objectReference: {fileID: 0}
-    - target: {fileID: 736099131735731830, guid: 30c704a765ac766408c5ad0751de3aa0, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
+    - target: {fileID: 736099131735731831, guid: 30c704a765ac766408c5ad0751de3aa0, type: 3}
+      propertyPath: speedometer
+      value: 
+      objectReference: {fileID: 1169418315}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30c704a765ac766408c5ad0751de3aa0, type: 3}
 --- !u!1001 &521436358
@@ -10744,6 +10744,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4140096659794746, guid: 63f209a73d2eb4e469c7ea5b5d8afd38, type: 3}
   m_PrefabInstance: {fileID: 1163605153}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1169418315 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1169418315, guid: 30c704a765ac766408c5ad0751de3aa0, type: 3}
+  m_PrefabInstance: {fileID: 519729688}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1175695491
 PrefabInstance:
   m_ObjectHideFlags: 0
