@@ -40,6 +40,11 @@ public class CarController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
+    private void Start()
+    {
+        transform.position = GameObject.FindGameObjectWithTag("Start").transform.position;
+    }
+
     private void FixedUpdate()
     {
         GetInput();
