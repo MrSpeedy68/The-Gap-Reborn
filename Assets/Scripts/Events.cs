@@ -18,4 +18,18 @@ public class Events
     {
         OnCheckpointEnterEvent?.Invoke(checkpoint);
     }
+    
+    public static event Action<float> OnTimeUpdateEvent;
+
+    public static void OnTimeUpdate(float time)
+    {
+        OnTimeUpdateEvent?.Invoke(time);
+    }
+    
+    public static event Action<float> OnIntervalUpdateEvent;
+
+    public static void OnIntervalUpdate(float time)
+    {
+        OnIntervalUpdateEvent?.Invoke(time);
+    }
 }

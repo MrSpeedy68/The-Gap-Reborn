@@ -34,7 +34,9 @@ public class CheckpointController : MonoBehaviour
     public void Update()
     {
         totalTime += Time.deltaTime;
+        Events.OnTimeUpdate(totalTime);
         intervalTime += Time.deltaTime;
+        Events.OnIntervalUpdate(intervalTime);
     }
 
     public void RaceStart()
@@ -47,6 +49,7 @@ public class CheckpointController : MonoBehaviour
         complete = true;
         intervalTime = 0;
         totalTime = 0;
+        targetCheckpoint = 0;
     }
 
     public void CheckpointEnter(Checkpoint checkpoint)
