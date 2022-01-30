@@ -18,6 +18,8 @@ public class CarController : MonoBehaviour
     [SerializeField] private float motorForce;
     [SerializeField] private float breakForce;
     [SerializeField] private float maxSteerAngle;
+    
+    [SerializeField] private bool isRearWheelDrive;
 
     [SerializeField] private TMP_Text speedometer;
 
@@ -49,8 +51,17 @@ public class CarController : MonoBehaviour
 
     private void HandleMotor()
     {
-        frontLeftWC.motorTorque = verticleInput * motorForce;
-        frontRightWC.motorTorque = verticleInput * motorForce;
+        if (!isRearWheelDrive)
+        {
+            frontLeftWC.motorTorque = verticleInput * motorForce;
+            frontRightWC.motorTorque = verticleInput * motorForce;
+        }
+        else
+        {
+            rearLeftWC.motorTorque = verticleInput * motorForce;
+            rearRightWC.motorTorque = verticleInput * motorForce;
+        }
+
         currentbreakForce = isBreaking ? breakForce : 0f;
         ApplyBreaking();
     }
