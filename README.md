@@ -6,6 +6,6 @@ This game was built using the Unity 3D game engine. Featuring multiple cars and 
 
 It can be found here https://globalgamejam.org/2022/games/gap-reborn-0
 
-![alt text] (https://github.com/MrSpeedy68/The-Gap-Reborn/blob/b3ac12d241c488481c8b08703dd4838f9d2ae729/game.png)
+![alt text] (https://github.com/MrSpeedy68/The-Gap-Reborn/blob/main/game.png?raw=true)
 
-![alt text] (https://github.com/MrSpeedy68/The-Gap-Reborn/blob/b3ac12d241c488481c8b08703dd4838f9d2ae729/suzuka.png)
+![alt text] (https://github.com/MrSpeedy68/The-Gap-Reborn/blob/main/suzuka.png?raw=true)
